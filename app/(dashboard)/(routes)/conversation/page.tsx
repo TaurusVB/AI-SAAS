@@ -22,6 +22,8 @@ import Loader from "@/components/Loader";
 
 import { formSchema } from "./constans";
 import { cn } from "@/lib/utils";
+import { Avatar } from "@/components/ui/avatar";
+import BotAvatar from "@/components/BotAvatar";
 
 const ConversationPage = () => {
   const router = useRouter();
@@ -121,7 +123,8 @@ const ConversationPage = () => {
                     : "bg-muted"
                 )}
               >
-                {message.content}
+                {message.role === "user" ? <Avatar /> : <BotAvatar />}
+                <p className="text-sm">{message.content}</p>
               </div>
             ))}
           </div>
