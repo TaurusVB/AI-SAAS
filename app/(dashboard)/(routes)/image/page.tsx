@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import axios from "axios";
 
@@ -17,11 +18,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
-
-import { amountOptions, formSchema, resolutionOptions } from "./constans";
-import { cn } from "@/lib/utils";
-import { Avatar } from "@/components/ui/avatar";
-import BotAvatar from "@/components/BotAvatar";
 import {
   Select,
   SelectContent,
@@ -30,7 +26,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
+
+import { amountOptions, formSchema, resolutionOptions } from "./constans";
 
 const ImagePage = () => {
   const router = useRouter();
