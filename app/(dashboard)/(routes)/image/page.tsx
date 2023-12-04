@@ -29,8 +29,11 @@ import { Card, CardFooter } from "@/components/ui/card";
 
 import { amountOptions, formSchema, resolutionOptions } from "./constans";
 
+import useProModal from "@/hooks/useProModal";
+
 const ImagePage = () => {
   const router = useRouter();
+  const { onOpen } = useProModal();
 
   const [images, setImages] = useState<string[]>([]);
 
@@ -57,8 +60,9 @@ const ImagePage = () => {
 
       form.reset();
     } catch (error: any) {
-      // TODO open pro modal
-      console.log(error);
+      if (error?.response?.status === 403) {
+        onOpen();
+      }
     } finally {
       router.refresh();
     }

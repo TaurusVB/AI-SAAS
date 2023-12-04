@@ -20,14 +20,18 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
-
-import { formSchema } from "./constans";
-import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui/avatar";
 import BotAvatar from "@/components/BotAvatar";
 
+import { formSchema } from "./constans";
+
+import { cn } from "@/lib/utils";
+
+import useProModal from "@/hooks/useProModal";
+
 const CodePage = () => {
   const router = useRouter();
+  const { onOpen } = useProModal();
 
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -57,8 +61,9 @@ const CodePage = () => {
 
       form.reset();
     } catch (error: any) {
-      // TODO open pro modal
-      console.log(error);
+      if (error?.response?.status === 403) {
+        onOpen();
+      }
     } finally {
       router.refresh();
     }

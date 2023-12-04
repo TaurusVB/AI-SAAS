@@ -10,12 +10,16 @@ import { Button } from "./ui/button";
 
 import { MAX_FREE_COUNTS } from "@/constants";
 
+import useProModal from "@/hooks/useProModal";
+
 interface IFreeCounterProps {
   apiLimitCount: number;
 }
 
 const FreeCounter: FC<IFreeCounterProps> = ({ apiLimitCount }) => {
   const [isMounted, setIsMounted] = useState(false);
+
+  const { onOpen } = useProModal();
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,7 +42,7 @@ const FreeCounter: FC<IFreeCounterProps> = ({ apiLimitCount }) => {
               value={(apiLimitCount / MAX_FREE_COUNTS) * 100}
             />
           </div>
-          <Button className="w-full" variant="premium">
+          <Button onClick={onOpen} className="w-full" variant="premium">
             Upgrade
             <Zap className="w-4 h-4 ml-2 fill-white" />
           </Button>
