@@ -13,23 +13,13 @@ interface MobileSidebarProps {
 }
 
 const MobileSidebar = ({ apiLimitCount }: MobileSidebarProps) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
-
   return (
     <Sheet>
-      <SheetTrigger>
-        <Button variant="ghost" size="icon" className="md:hidden">
+      <Button asChild variant="ghost" size="icon" className="md:hidden">
+        <SheetTrigger>
           <Menu />
-        </Button>
-      </SheetTrigger>
+        </SheetTrigger>
+      </Button>
       <SheetContent side="left" className="p-0">
         <Sidebar apiLimitCount={apiLimitCount} />
       </SheetContent>

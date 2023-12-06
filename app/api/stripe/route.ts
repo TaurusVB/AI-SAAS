@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 
 import prismadb from "@/lib/prismadb";
 import { stripe } from "@/lib/stripe";
-import { absouteUrl } from "@/lib/utils";
+import { absoluteUrl } from "@/lib/utils";
 
-const settingsUrl = absouteUrl("/settings");
+const settingsUrl = absoluteUrl("/settings");
 
 export async function GET() {
   try {
@@ -61,7 +61,7 @@ export async function GET() {
 
     return new NextResponse(JSON.stringify({ url: stripeSession.url }));
   } catch (error) {
-    console.log("STRIPE_ERROR", error);
-    return new NextResponse("Internal error", { status: 500 });
+    console.log("[STRIPE_ERROR]", error);
+    return new NextResponse("Internal Error", { status: 500 });
   }
 }
