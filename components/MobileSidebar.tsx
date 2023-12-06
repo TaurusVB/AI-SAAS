@@ -10,9 +10,13 @@ import Sidebar from "./Sidebar";
 
 interface MobileSidebarProps {
   apiLimitCount: number;
+  isPro: boolean;
 }
 
-const MobileSidebar = ({ apiLimitCount }: MobileSidebarProps) => {
+const MobileSidebar = ({
+  apiLimitCount,
+  isPro = false,
+}: MobileSidebarProps) => {
   return (
     <Sheet>
       <Button asChild variant="ghost" size="icon" className="md:hidden">
@@ -21,7 +25,7 @@ const MobileSidebar = ({ apiLimitCount }: MobileSidebarProps) => {
         </SheetTrigger>
       </Button>
       <SheetContent side="left" className="p-0">
-        <Sidebar apiLimitCount={apiLimitCount} />
+        <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} />
       </SheetContent>
     </Sheet>
   );
