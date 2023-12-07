@@ -21,8 +21,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
-import { Avatar } from "@/components/ui/avatar";
 import BotAvatar from "@/components/BotAvatar";
+import UserAvatar from "@/components/UserAvatar";
 
 import { formSchema } from "./constans";
 
@@ -132,7 +132,7 @@ const CodePage = () => {
                     : "bg-muted"
                 )}
               >
-                {message.role === "user" ? <Avatar /> : <BotAvatar />}
+                {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
                 <ReactMarkdown
                   components={{
                     pre: ({ node, ...props }) => (
