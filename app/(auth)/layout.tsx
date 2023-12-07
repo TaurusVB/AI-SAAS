@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Authentication | ADMIN-DASHBOARD",
-  description: "E-commerce ADMIN-DASHBOARD, Authentication page",
+  title: "Authentication | Genius",
+  description: "AI SAAS platform, Authentication page",
 };
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
