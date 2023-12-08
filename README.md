@@ -4,21 +4,25 @@ Welcome to Genius, the AI-powered platform designed to assist you in various asp
 <div align="left">
   <img height="400" src="https://res.cloudinary.com/dvlinx4rz/image/upload/v1701969686/AI-SAAS_omk503.png"  />
 </div>
-Genius offers a range of capabilities across different sections:
 
-## Conversation
+## Important!!!
+Since I'm using a free API, the number of requests may be limited, and you may encounter issues! Also, because I'm using Hobby Production on Vercel, the response time shouldn't exceed 10 seconds. If it does, you'll receive an error. Therefore, the simpler your query, the better. Thank you all for paying attention to my project, and I apologize for any inconvenience if something goes wrong, as all my projects are currently being developed solely for educational purposes.
+
+## Pages
+
+### Conversation
 Engage in conversation, ask questions, and receive prompt answers. Utilize this feature to interact with an AI assistant capable of understanding and responding to your queries, providing insights, and engaging in discussions.
 
-## Image Generation
+### Image Generation
 Create images based on your descriptions or preferences. Describe the visuals you want to see, and let the AI generate images accordingly. Experiment with different descriptions to witness diverse image outputs.
 
-## Video Generation
+### Video Generation
 Describe what you envision and witness the final result. Craft your vision through descriptions, and the AI will generate a video based on your input. Explore the possibilities of turning ideas into visual content.
 
-## Music Generation
+### Music Generation
 Explore your musical side—compose, play guitar, bass, or describe the tunes you want to hear. Engage with AI to create music or describe melodies, allowing the platform to generate musical compositions based on your input.
 
-## Code Generation
+### Code Generation
 Discover the potential of AI in coding—could this replace developers? Who knows? Let's find out! Utilize this feature to experiment with AI-generated code snippets or explore how AI interprets and generates code based on your descriptions. 
 
 ---
